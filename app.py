@@ -29,6 +29,15 @@ st.set_page_config(
     layout="wide"
 )
 
+# Hide Streamlit style (menu, header, footer)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}   /* top-right menu */
+            footer {visibility: hidden;}     /* bottom footer */
+            header {visibility: hidden;}     /* top header */
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # =========================
 # App Content
 # =========================
